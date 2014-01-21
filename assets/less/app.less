@@ -1,0 +1,539 @@
+/*!
+ * Roots 6.5.1
+ */
+
+@import url("//fonts.googleapis.com/css?family=Bree+Serif");
+@import url("//fonts.googleapis.com/css?family=Open+Sans");
+@import url("//fonts.googleapis.com/css?family=Droid+Serif");
+@import url("//fonts.googleapis.com/css?family=Droid+Sans");
+@import url("//fonts.googleapis.com/css?family=Molengo");
+@import url("//fonts.googleapis.com/css?family=Lekton");
+
+@import "bootstrap/bootstrap.less";
+
+@import "font-awesome/font-awesome.less";
+
+@rjfs-red: #ce2127;
+// #222
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+}
+
+header.navbar-default {
+  background-color: #000;
+  background-image: url("../img/binding_dark.png");
+  //  background-image: url("../img/dark_dotted2.png");
+  border-bottom-color: @gray-lighter;
+  border-bottom-width: 10px;
+}
+
+.logo > img {
+  margin: auto;
+}
+
+.navbar-header-top {
+  background-color: @rjfs-red;
+
+  .navbar-brand {
+    padding: 12px 5px 10px 5px;
+  }
+
+  .navbar-toggle {
+    float: left;
+  }
+
+  .glyphicon {
+    top: 2px;
+    color: @rjfs-red;
+  }
+
+  .social {
+    margin-right: 50px;
+
+    a {
+      color: #FFF;
+      font-size: 31px;
+      margin-left: 15px;
+    }
+
+    a:hover {
+      color: #000;
+      text-shadow: 0px -1px 0px rgba(240, 225, 225, 0.4);
+    }
+  }
+
+  .label-top-nav:extend(.label-default) {
+    background-color: #FFF;
+    color: #000;
+    font-size: 90%;
+  }
+
+  .phone-number {
+    top: 6px;
+    font-size: 31px;
+    position: relative;
+    text-shadow: 0px -1px 0px rgba(240, 225, 225, 0.4);
+  }
+
+  .phone-number:hover {
+    color: #FFF;
+  }
+}
+
+.navbar-header-logo:extend(.navbar-header) {
+  float: none;
+
+  .logo:extend(h3) {
+    display: inline-block;
+    width: 100%;
+  }
+
+  h3 {
+    color: #FFF;
+  }
+
+}
+
+.black {
+  color: #000;
+}
+
+.navbar-header-nav:extend(.navbar-header) {
+  width: 100%;
+  ul.nav {
+    background-color: @rjfs-red;
+    width: 100%;
+  }
+}
+
+.navbar-default {
+  font-weight: bolder;
+  color: @gray-dark;
+
+  .navbar-nav>li>a {
+    background-color: @rjfs-red;
+    color: #FFF;
+  }
+
+  .navbar-nav>li>a:hover, .navbar-nav>li.active>a {
+    background-color: @gray-lighter;
+    color: @gray-dark;
+  }
+}
+
+.nav.nav-pills.nav-stacked>li {
+  #gradient.vertical(#BFBFBF, #FFF, 0%, 100%);
+  .border-left-radius(@border-radius-base);
+  .border-right-radius(@border-radius-base);
+}
+
+.nav.nav-pills.nav-stacked>li:hover {
+  #gradient.vertical(#FFF, #E6E6E6, 0% , 100%);
+}
+
+.front-page-carousel {
+
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    .border-bottom-radius(@border-radius-base);
+  }
+
+  .carousel-caption {
+    background-color: rgba(129, 115, 115, 0.7);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    .border-bottom-radius(@border-radius-base);
+  }
+}
+
+.nav-widgets {
+  .feature {
+    position: relative;
+    width: 100%;
+
+    section {
+      text-align: center;
+      padding: 7.5px;
+
+      #gradient.vertical(#BFBFBF, #FFF, 0%, 100%);
+      .border-left-radius(@border-radius-base);
+      .border-right-radius(@border-radius-base);
+
+      .excerpt {
+        color: @gray-dark;
+      }
+
+      .excerpt, h2 {
+        text-align: left;
+        padding-left: 80px;
+      }
+
+      .icon{
+        background-color: @rjfs-red;
+        .img-circle();
+        width:64px;
+        height: 64px;
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        .glyphicon {
+          color: #FFF;
+          font-size: 30px;
+          margin-top: 15px;
+        }
+      }
+      }
+
+    .label {
+      position: absolute;
+      left: 50%;
+      font-size: 18px;
+      display: none;
+      white-space: normal;
+    }
+      }
+
+    .feature:hover {
+      color: @rjfs-red;
+      text-decoration: none;
+
+      section {
+        #gradient.vertical(#FFF, #E6E6E6, 0% , 100%);
+      }
+
+    .label {
+      font-size: 18px;
+      background-color: darken(@rjfs-red, 5%);
+      display: none;
+    }
+  }
+}
+
+.contact-us {
+  .button.gform_button {
+    width:100%;
+  }
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content {
+}
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main {
+}
+
+/* Gallery Shortcode */
+.gallery-row {
+  padding: 15px 0;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+}
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header {
+}
+
+.hentry time {
+}
+
+.hentry .byline {
+}
+
+.hentry .entry-content {
+}
+
+.hentry footer {
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+}
+
+.footer-top {
+  background-color: @gray-lighter;
+}
+
+.footer-bottom {
+  background-color: @gray-dark;
+  color: @gray-lighter;
+  padding: 15px 0;
+}
+
+/* ==========================================================================
+   Gravity Forms Hacks
+   ========================================================================== */
+
+.gform_wrapper ul {
+  .list-unstyled();
+}
+
+.gform_wrapper li {
+  .form-group();
+}
+
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: @state-danger-text;
+}
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  .form-control();
+}
+
+.ginput_container textarea {
+  height: auto;
+}
+
+.ginput_container textarea.small {
+    height: 65px !important;
+}
+
+.gform_button {
+  .btn();
+  .btn-primary();
+}
+
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: @state-danger-text;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @alert-danger-border;
+    background-color: @alert-danger-bg;
+    color: @alert-danger-text;
+    .form-control-focus(@alert-danger-text);
+  }
+}
+
+.validation_error {
+  .alert();
+  .alert-danger();
+}
+
+#gforms_confirmation_message {
+  .alert();
+  .alert-success();
+}
+
+.widget-inner #gform_wrapper_1{
+  .gfield_label {
+    .hidden();
+  }
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+.widget .widget-inner {
+  margin-top: 20px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li>a{
+      padding:10px 15px;
+    }
+  }
+}
+
+.widget .widget-inner h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  border-bottom: 5px solid @rjfs-red;
+}
+
+.page-header {
+  border-bottom: none;
+}
+
+.entry-title, .entry-title > a, .page-header h1 {
+  text-transform: uppercase;
+  color: @rjfs-red;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+figure.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) {
+
+  .logo > img {
+    margin: auto 0 !important;
+  }
+
+  .label-top-nav:extend(.label-default) {
+    display: inline-block !important;
+  }
+
+  .navbar-header-top .navbar-brand {
+    padding: 12px 5px 10px 5px;
+  }
+
+  .front-page-carousel {
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+      height: 375px;
+    }
+
+    .carousel-inner .btn {
+        display: inline-block !important;
+    }
+  }
+  // feture widgets
+  .nav-widgets {
+    .feature {
+
+      section {
+
+        .excerpt, h2 {
+          text-align: center !important;
+          padding-left: 0px !important;
+        }
+
+        .icon {
+          overflow: inherit !important;
+          position: inherit !important;
+        }
+      }
+
+      .label {
+        margin-top: 5px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        position: inherit !important;
+        left: auto !important;
+        display: block !important;
+        width: 80% !important;
+      }
+    }
+
+    .feature:hover {
+
+      .label {
+        font-size: 18px;
+        background-color: darken(@rjfs-red, 5%);
+        display: none;
+      }
+    }
+  }
+
+  // end feture widgets
+
+}
+
+
+@media (min-width: @screen-md-min) {
+  .navbar-header-top .navbar-brand {
+    padding: 5px 5px 10px 5px;
+  }
+
+  .front-page-carousel {
+    .carousel-caption {
+      left: 5%;
+      right: 50%;
+      top: 7%;
+      bottom: inherit;
+      background-color: rgba(129, 115, 115, 0.7);
+      .border-left-radius(@border-radius-base);
+      .border-right-radius(@border-radius-base);
+    }
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .navbar-header-top .navbar-brand {
+    padding: 5px 5px 10px 5px;
+  }
+
+  .front-page-carousel {
+    .carousel-caption {
+      left: 5%;
+      right: 50%;
+      top: 7%;
+      bottom: inherit;
+      background-color: rgba(129, 115, 115, 0.7);
+      .border-left-radius(@border-radius-base);
+      .border-right-radius(@border-radius-base);
+    }
+  }
+}
