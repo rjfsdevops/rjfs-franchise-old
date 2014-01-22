@@ -113,6 +113,7 @@ module.exports = function (grunt) {
                             'lang/**',
                             'templates/**',
                             'lib/**',
+                            'plugins/**',
                             '*.php',
                             'style.css',
                             'screenshot.png',
