@@ -1,5 +1,5 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
-    <div class="navbar-header-top">
+<header class="banner navbar navbar-default navbar-static-top" role="banner" style="background-image: url('<?php echo of_get_option('custom_background'); ?>'); background-position: initial initial; background-repeat: initial initial;">
+    <div class="navbar-header-top" >
         <div class="container">
             <div class="clearfix">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse4">
@@ -49,8 +49,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="navbar-header-logo clearfix">
+    <div class="container" >
+        <div class="navbar-header-logo clearfix" >
             <div class="row">
                 <div class="col-sm-8">
                     <a class="logo" href="<?php echo home_url(); ?>/">

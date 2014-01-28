@@ -43,6 +43,14 @@ function optionsframework_options()
         'std' => get_template_directory_uri() . '/assets/img/ramjack-logo.png',
         'type' => 'upload');
 
+    //background
+    $options[] = array(
+        'name' => __('Custom Header Background', 'options_framework_theme'),
+        'desc' => __('Background for the header area.', 'options_framework_theme'),
+        'id' => 'custom_background',
+        'std' => get_template_directory_uri() . '/assets/img/dark_dotted2.png',
+        'type' => 'upload');
+
     //phone number
     $options[] = array(
         'name' => __('Phone Number', 'options_framework_theme'),
@@ -103,6 +111,10 @@ function optionsframework_options()
         'id' => 'parallax',
         'std' => '',
         'type' => 'upload');
+
+    $options[] = array(
+        'name' => __('SEO Settings', 'options_framework_theme'),
+        'type' => 'heading' );
 
     /**
      * For $settings options see:
