@@ -16,9 +16,6 @@
 
         <style>
         .content-info {
-            color: #FFF;
-        }
-        .content-info {
             position: relative;
         }
         .content-info .footer-top {

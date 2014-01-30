@@ -59,7 +59,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 hidden-xs text-right">
-                    <h3><?php echo html_entity_decode(of_get_option('header_caption'), ENT_QUOTES); ?></h3>
+                    <h3><?php echo html_entity_decode(of_get_option('header_caption'), ENT_QUOTES); ?><br/><small><?php echo html_entity_decode(of_get_option('header_description'), ENT_QUOTES); ?></small></h3>
                 </div>
             </div>
         </div>

@@ -26,13 +26,10 @@
                 <?php dynamic_sidebar('sidebar-footer-right'); ?>
             </div>
         </div>
-        <div class="row">
-            <div class="footer-bottom">
-
-                <div class="col-sm-12">
-                    <?php dynamic_sidebar('sidebar-footer'); ?>
-                    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-                </div>
+        <div class="row footer-bottom">
+            <div class="col-sm-12">
+                <?php dynamic_sidebar('sidebar-footer'); ?>
+                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
             </div>
         </div>
     </div>

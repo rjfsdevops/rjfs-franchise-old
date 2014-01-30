@@ -37,6 +37,7 @@ function roots_setup()
 
     // Tell the TinyMCE editor to use a custom stylesheet
     add_editor_style('/assets/css/editor-style.css');
+
 }
 
 add_action('after_setup_theme', 'roots_setup');
@@ -45,3 +46,5 @@ add_action('after_setup_theme', 'roots_setup');
 if (!defined('__DIR__')) {
     define('__DIR__', dirname(__FILE__));
 }
+
+

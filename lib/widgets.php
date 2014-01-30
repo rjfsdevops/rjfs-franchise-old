@@ -70,14 +70,14 @@ function roots_widgets_init()
         'after_title' => '</h3>',
     ));
 
-    register_sidebar(array(
-        'name' => __('Pre-Footer Right', 'roots'),
-        'id' => 'sidebar-footer-top-right',
-        'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
-        'after_widget' => '</div></section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ));
+//    register_sidebar(array(
+//        'name' => __('Pre-Footer Right', 'roots'),
+//        'id' => 'sidebar-footer-top-right',
+//        'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+//        'after_widget' => '</div></section>',
+//        'before_title' => '<h3>',
+//        'after_title' => '</h3>',
+//    ));
 
     //FOOTER WIDGETS
     register_sidebar(array(
@@ -119,8 +119,9 @@ class RJFS_FrontPageFeaturedService extends WP_Widget
 {
     private $fields = array(
         'title' => 'Title',
-        'icon_class' => 'Icon Class',
-        'icon_code' => 'Icon Code',
+        'icon_class' => 'Bootstrap Icon Class <em>wrench</em>',
+        'icon_code' => 'Font Awesome Icon Class <em>fa-camera-retro</em>',
+        'img_src' => 'Image Url <em>(64px X 64px)</em>',
         'excerpt' => 'Excerpt',
         'button_text' => 'Button Text',
         'target_url' => 'Target Url'
@@ -178,8 +179,12 @@ class RJFS_FrontPageFeaturedService extends WP_Widget
         if (!empty($instance['icon_class'])) {
             ?>
             <div class="icon"><span class="glyphicon glyphicon-<? echo $instance['icon_class'] ?>"></span></div><?php
+        } else if(!empty($instance['icon_code'])) {
+            ?>
+            <div class="icon"><i class="fa <?php echo $instance['icon_code'] ?>"></i></div><?php
         } else {
-            echo html_entity_decode($instance['icon_code'], ENT_QUOTES);
+            ?>
+            <div class="icon"><img style=" width: 64px; height: 64px;" src="<?php echo $instance['img_src'] ?>"/></div><?php
         }
         ?>
         <h2><?php echo $title ?></h2>
@@ -220,7 +225,7 @@ class RJFS_FrontPageFeaturedService extends WP_Widget
             <p>
                 <label
                     for="<?php echo esc_attr($this->get_field_id($name)); ?>"><?php _e("{$label}:", 'roots'); ?></label>
-                <?php if (in_array($name, array("icon_code", "excerpt"))) { ?>
+                <?php if (in_array($name, array("excerpt"))) { ?>
                     <textarea class="widefat" rows="16" cols="20"
                               id="<?php echo esc_attr($this->get_field_id($name)); ?>"
                               name="<?php echo esc_attr($this->get_field_name($name)); ?>"><?php echo ${$name}; ?></textarea>

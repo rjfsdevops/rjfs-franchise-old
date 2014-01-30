@@ -130,13 +130,27 @@ function optionsframework_options()
         'tinymce' => array('plugins' => 'wordpress')
     );
 
+//    $options[] = array(
+//        'name' => __('Header Caption', 'options_framework_theme'),
+//        'desc' => 'You can enter a SEO friendly description of your company.',
+//        'id' => 'header_caption',
+//        'std' => '<b>Ram Jack</b><br/><small>Foundation Repair Services For [ENTER COMPNAY NAME] and surrounding areas</small>',
+//        'type' => 'editor',
+//        'settings' => $wp_editor_settings);
+
     $options[] = array(
         'name' => __('Header Caption', 'options_framework_theme'),
-        'desc' => 'You can enter a SEO friendly description of your company.',
+        'desc' => 'You can enter a SEO friendly company name.',
         'id' => 'header_caption',
-        'std' => '<b>Ram Jack</b><br/><small>Foundation Repair Services For [ENTER COMPNAY NAME] and surrounding areas</small>',
-        'type' => 'editor',
-        'settings' => $wp_editor_settings);
+        'std' => 'Company Name',
+        'type' => 'text');
+
+    $options[] = array(
+        'name' => __('Header Description', 'options_framework_theme'),
+        'desc' => 'You can enter a SEO friendly description of your company.',
+        'id' => 'header_description',
+        'std' => 'Foundation Repair Services For...',
+        'type' => 'text');
 
     return $options;
 }
