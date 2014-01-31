@@ -4,6 +4,7 @@
         <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-summary">
+        <?php echo the_post_thumbnail(); ?>
         <?php the_excerpt(); ?>
     </div>
 </article>

@@ -39,6 +39,7 @@ header.navbar-default {
   //  background-image: url("../img/dark_dotted2.png");
   border-bottom-color: @gray-lighter;
   border-bottom-width: 10px;
+  margin-bottom: 0;
 
   .navbar-nav>.dropdown:hover {
     .dropdown-menu {
@@ -323,11 +324,20 @@ header.navbar-default {
    ========================================================================== */
 
 .main {
-  line-height: 1.5;
+  line-height: 2;
+  padding-right: 25px;
+
   img {
     .img-responsive();
   }
 
+  h2, h3 {
+    margin-top: 0px;
+  }
+  .wp-post-image {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Gallery Shortcode */
@@ -488,7 +498,7 @@ header.navbar-default {
 }
 
 .page-header {
-  margin-top: 0;
+  margin: 0;
   border-bottom: none;
 }
 

@@ -5,6 +5,7 @@
             <?php get_template_part('templates/entry-meta'); ?>
         </header>
         <div class="entry-content">
+            <?php the_post_thumbnail('full', array('class' => 'alignleft')); ?>
             <?php the_content(); ?>
         </div>
         <footer>
