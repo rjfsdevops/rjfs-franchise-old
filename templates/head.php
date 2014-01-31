@@ -28,6 +28,7 @@
             min-height: 250px;
         }
 
+
         .content-info .footer-top:before {
             top: 0;
             background-image: url($theme_url/assets/img/top-shadow.png);

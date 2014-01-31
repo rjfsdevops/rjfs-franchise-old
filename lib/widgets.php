@@ -33,14 +33,14 @@ function roots_widgets_init()
     ));
 
     // Sidebars
-    register_sidebar(array(
-        'name' => __('Pre-Primary Nav', 'roots'),
-        'id' => 'pre-sidebar-primary',
-        'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
-        'after_widget' => '</div></section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ));
+//    register_sidebar(array(
+//        'name' => __('Pre-Primary Nav', 'roots'),
+//        'id' => 'pre-sidebar-primary',
+//        'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+//        'after_widget' => '</div></section>',
+//        'before_title' => '<h3>',
+//        'after_title' => '</h3>',
+//    ));
 
     register_sidebar(array(
         'name' => __('Primary', 'roots'),
@@ -70,14 +70,14 @@ function roots_widgets_init()
         'after_title' => '</h3>',
     ));
 
-//    register_sidebar(array(
-//        'name' => __('Pre-Footer Right', 'roots'),
-//        'id' => 'sidebar-footer-top-right',
-//        'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
-//        'after_widget' => '</div></section>',
-//        'before_title' => '<h3>',
-//        'after_title' => '</h3>',
-//    ));
+    register_sidebar(array(
+        'name' => __('Pre-Footer Right', 'roots'),
+        'id' => 'sidebar-footer-top-right',
+        'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+        'after_widget' => '</div></section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
 
     //FOOTER WIDGETS
     register_sidebar(array(

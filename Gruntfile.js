@@ -34,6 +34,20 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'assets/js/scripts.min.js': [
+                        'assets/js/scripts.js'
+                    ]
+                },
+                options: {
+                    // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
+//                     sourceMap: 'assets/js/scripts.min.js.map',
+//                     sourceMappingURL: '/assets/js/scripts.min.js.map'
+                }
+            }
+        },
+        concat: {
+            dist: {
+                files: {
+                    'assets/js/scripts.js': [
                         'assets/js/plugins/bootstrap/transition.js',
                         'assets/js/plugins/bootstrap/alert.js',
                         'assets/js/plugins/bootstrap/button.js',
@@ -49,11 +63,6 @@ module.exports = function (grunt) {
                         'assets/js/plugins/*.js',
                         'assets/js/_*.js'
                     ]
-                },
-                options: {
-                    // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
-                    // sourceMap: 'assets/js/scripts.min.js.map',
-                    // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
                 }
             }
         },
@@ -98,6 +107,7 @@ module.exports = function (grunt) {
         clean: {
             dist: [
                 'assets/css/main.min.css',
+                'assets/js/scripts.js',
                 'assets/js/scripts.min.js'
             ]
         },
@@ -120,7 +130,7 @@ module.exports = function (grunt) {
                             'screenshot.png',
                             '!assets/less/**',
                             '!assets/js/plugins/**',
-                            '!assets/js/vendor/**',
+//                            '!assets/js/vendor/**',
                         ],
                         dest: 'rjfs-franchise/'
                     }
@@ -135,6 +145,7 @@ module.exports = function (grunt) {
 
     // Load tasks
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -146,6 +157,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'clean',
         'less',
+        'concat',
         'uglify',
         'version'
     ]);

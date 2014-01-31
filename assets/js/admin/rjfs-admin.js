@@ -49,6 +49,11 @@ if (RJFS == undefined) {
                 }
                 jQuery('#list_type_icon').parents('p').show();
             }
+        },
+        clear: function(){
+            //debugger;
+            jQuery('#rjfs-list-icon input[type=radio]').removeAttr('checked');
+            this.loadSelect();
         }
     };
 }
@@ -61,5 +66,10 @@ jQuery(document).ready(function ($) {
     $('#rjfs-list-icon input[type=radio]').on('change', function () {
         var val = $(this).val();
         RJFS.checkRadio(val);
+    });
+
+    $('#rjfs-list-icon button').click(function(e){
+        e.preventDefault();
+        RJFS.clear();
     });
 });
