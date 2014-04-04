@@ -1,5 +1,6 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner" style="background-image: url('<?php echo of_get_option('custom_background'); ?>'); background-position: initial initial; background-repeat: initial initial;">
-    <div class="navbar-header-top" >
+<header class="banner navbar navbar-default navbar-static-top" role="banner"
+        style="background-image: url('<?php echo of_get_option('custom_background'); ?>'); background-position: initial initial; background-repeat: initial initial;">
+    <div class="navbar-header-top">
         <div class="container">
             <div class="clearfix">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse4">
@@ -9,9 +10,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="pull-right">
-                    <a class="navbar-brand" href="tel:9132134548">
-                        <span class="label label-top-nav hidden-xs">
-                            <span class="glyphicon glyphicon-time"></span> Call Us Today!</span>
+                    <span class="label label-top-nav hidden-xs">
+                        <span class="glyphicon glyphicon-time"></span> Call Us Today!</span>
+
+                    <a class="navbar-brand" href="tel:<?php echo of_get_option("phone_number"); ?>">
                         <span class="phone-number black">
                             <?php echo of_get_option("phone_number"); ?>
                         </span>
@@ -27,10 +29,9 @@
                         'pinterest',
                         'youtube'
                     );
-                    foreach($social as $key){
+                    foreach ($social as $key) {
                         $url = of_get_option($key);
-                        if(!empty($url))
-                        {
+                        if (!empty($url)) {
                             echo "<a href='$url'><i class='fa fa-$key'></i></a>";
                         }
                     }
@@ -49,17 +50,19 @@
         </div>
     </div>
 
-    <div class="container" >
-        <div class="navbar-header-logo clearfix" >
+    <div class="container">
+        <div class="navbar-header-logo clearfix">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-4">
                     <a class="logo" href="<?php echo home_url(); ?>/">
                         <img class="img-responsive" src="<?php echo of_get_option('custom_logo'); ?>"
                              alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div>
-                <div class="col-sm-4 hidden-xs text-right">
-                    <h3><?php echo html_entity_decode(of_get_option('header_caption'), ENT_QUOTES); ?><br/><small><?php echo html_entity_decode(of_get_option('header_description'), ENT_QUOTES); ?></small></h3>
+                <div class="col-sm-8 hidden-xs text-right">
+                    <h3><?php echo html_entity_decode(of_get_option('header_caption'), ENT_QUOTES); ?><br/>
+                        <small><?php echo html_entity_decode(of_get_option('header_description'), ENT_QUOTES); ?></small>
+                    </h3>
                 </div>
             </div>
         </div>

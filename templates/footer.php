@@ -28,8 +28,7 @@
         </div>
         <div class="row footer-bottom">
             <div class="col-sm-12">
-                <?php dynamic_sidebar('sidebar-footer'); ?>
-                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+                <?php dynamic_sidebar('sidebar-footer-bottom'); ?>
             </div>
         </div>
     </div>

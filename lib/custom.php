@@ -128,7 +128,7 @@ function my_theme_register_required_plugins()
         array(
             'name' => 'Granvity Forms', // The plugin name
             'slug' => 'gravityforms', // The plugin slug (typically the folder name)
-            'source' => get_stylesheet_directory() . '/plugins/gravityforms.zip', // The plugin source
+            'source' => 'https://www.dropbox.com/s/jkxe2vkuokggs7b/gravityforms_1.6.10.zip?dl=1', // The plugin source
             'required' => true, // If false, the plugin is only 'recommended' instead of required
             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
             'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -140,6 +140,12 @@ function my_theme_register_required_plugins()
         array(
             'name' => 'Bootstrap Shortcodes',
             'slug' => 'bootstrap-shortcodes',
+            'required' => true,
+        ),
+
+        array(
+            'name' => 'Custom Post Widget',
+            'slug' => 'custom-post-widget',
             'required' => true,
         ),
 
