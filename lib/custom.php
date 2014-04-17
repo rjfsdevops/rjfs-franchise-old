@@ -149,6 +149,12 @@ function my_theme_register_required_plugins()
             'required' => true,
         ),
 
+        array(
+            'name' => 'Gravity Forms - Placeholders add-on',
+            'slug' => 'gravity-forms-placeholders',
+            'required' => true,
+        ),
+
     );
 
     // Change this to your theme text domain, used for internationalising strings
