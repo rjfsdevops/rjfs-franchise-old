@@ -201,3 +201,32 @@ function my_theme_register_required_plugins()
     tgmpa($plugins, $config);
 }
 
+add_action('wp_head', 'konami');
+
+function konami()
+{
+    $current_user = wp_get_current_user();
+    if ($current_user->user_login == 'sragland') {
+
+        $output = <<<EOQ
+            <script>
+                function randomIntFromInterval(min,max)
+                {
+                    return Math.floor(Math.random()*(max-min+1)+min);
+                }
+
+                function doWork(){
+                    setTimeout(function(){cornify_add();doWork()}, randomIntFromInterval(30000, 60000));
+                }
+
+                $(document).ready(function(){
+                    $.getScript('http://www.cornify.com/js/cornify.js',function(){
+                        setTimeout(function(){cornify_add();doWork()}, randomIntFromInterval(30000, 60000));
+                    });
+                });
+            </script>
+EOQ;
+        echo $output;
+    }
+
+}

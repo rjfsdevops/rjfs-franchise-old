@@ -129,6 +129,7 @@ class RJFS_FrontPageFeaturedService extends WP_Widget
 {
     private $fields = array(
         'title' => 'Title',
+        'anchor_id' => 'Anchor Tag ID',
         'icon_class' => 'Bootstrap Icon Class <em>wrench</em>',
         'icon_code' => 'Font Awesome Icon Class <em>fa-camera-retro</em>',
         'img_src' => 'Image Url <em>(64px X 64px)</em>',
@@ -177,24 +178,22 @@ class RJFS_FrontPageFeaturedService extends WP_Widget
             }
         }
 
-        ?><a href="<?php echo $instance['target_url']; ?>" class="feature"><?php
+        ?><a id="<?php echo $instance['anchor_id']; ?>" href="<?php echo $instance['target_url']; ?>"
+             class="feature"><?php
         echo $before_widget;
-
-//        if ($title) {
-//            echo $before_title, $title, $after_title;
-//        }
         ?>
 
         <?php
         if (!empty($instance['icon_class'])) {
             ?>
             <div class="icon"><span class="glyphicon glyphicon-<? echo $instance['icon_class'] ?>"></span></div><?php
-        } else if(!empty($instance['icon_code'])) {
+        } else if (!empty($instance['icon_code'])) {
             ?>
             <div class="icon"><i class="fa <?php echo $instance['icon_code'] ?>"></i></div><?php
         } else {
             ?>
-            <div class="icon"><img style=" width: 64px; height: 64px;" src="<?php echo $instance['img_src'] ?>"/></div><?php
+            <div class="icon"><img style=" width: 64px; height: 64px;" src="<?php echo $instance['img_src'] ?>"/>
+            </div><?php
         }
         ?>
         <h2><?php echo $title ?></h2>
