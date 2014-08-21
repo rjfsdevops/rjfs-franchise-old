@@ -5,10 +5,12 @@
   display: block;
   margin: (@line-height-computed / 2) auto;
 }
+
 .alignleft,
 .alignright {
   margin-bottom: (@line-height-computed / 2);
 }
+
 figure.alignnone {
   margin-left: 0;
   margin-right: 0;
@@ -21,8 +23,44 @@ figure.alignnone {
     float: left;
     margin-right: (@line-height-computed / 2);
   }
+
   .alignright {
     float: right;
     margin-left: (@line-height-computed / 2);
   }
+}
+
+// RJFS
+// ---------------------
+.widget .widget-inner {
+  margin-top: 20px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li > a {
+      padding: 10px 15px;
+    }
+  }
+}
+
+.widget .widget-inner h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  border-bottom: 5px solid @rjfs-red;
+}
+
+.widget .textwidget img {
+  .img-responsive();
+}
+
+.page-header {
+  margin: 0;
+  border-bottom: none;
+}
+
+.entry-title, .entry-title > a, .page-header h1 {
+  text-transform: uppercase;
+  color: @rjfs-red;
 }

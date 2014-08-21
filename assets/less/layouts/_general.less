@@ -1,10 +1,31 @@
 // Content wrapper
-.wrap { }
+.wrap {
+}
 
 // Main content area
 .main {
   .make-sm-column(@main-sm-columns);
   .sidebar-primary & {
     .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
+  }
+}
+
+// RJFS
+// -------------------
+.main {
+  line-height: 2;
+  padding-right: 25px;
+
+  img {
+    .img-responsive();
+  }
+
+  h2, h3 {
+    margin-top: 0px;
+  }
+
+  .wp-post-image {
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 }
